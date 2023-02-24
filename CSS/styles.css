@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "Nunito-Sans_Regular";
+    src: url("../FONTS/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-Sans_Light";
+    src: url("../FONTS/Nunito_Sans/NunitoSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-Sans_Italic";
+    src: url("../FONTS/Nunito_Sans/NunitoSans-Italic.ttf");
+}
+
+@font-face {
+    font-family: "YesevaOne-Regular";
+    src: url("../FONTS/Yeseva_One/YesevaOne-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito-Sans_Light";
+}
+
+.container {
+    width: 100%;
+    max-width: 1256px;
+    margin: 0 auto;
+}
+
+.projects {
+    background: #131313;
+    /* height: 1074px; */
+}
+
+.projects-content {
+    padding: 107px 42px 415px;
+    box-sizing: border-box;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    margin-right: 56px;
+    list-style-type: none;
+}
+
+.projects-list__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.projects-list__item {
+    list-style: none;
+    font-family: 'YesevaOne-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.projects-list li:nth-child(2) {
+    padding: 0px 60px;
+}
+
+.projects-info__text_subtitle {
+    font-family: 'YesevaOne-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.projects-info__text_description {
+    font-family: 'Nunito-Sans_Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #FFFFFF;
+    padding-top: 34px;
+    padding-bottom: 42px;
+}
+
+.projects-info__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-right: 84px;
+    height: 162px;
+}
+
+.projects-info__item:nth-child(-n+2) {
+    padding-bottom: 34px;
+}
+
+.projects-info__item:nth-child(4) {
+    padding-top: 32px;
+}
+
+.projects-info__item_subtitle {
+    font-family: 'YesevaOne-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.projects-info__item_text {
+    font-family: 'Nunito-Sans_Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #FFFFFF;
+    position: absolute;
+    padding-top: 9px;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.projects-info__item_text.active {
+    opacity: 1;
+}
+
+.projects-info__item-time {
+    padding-top: 34px;
+}
+
+.slider-buttons {
+    padding-top: 80px;
+    display: flex;
+}
+
+.slider-item {
+    cursor: pointer;
+}
+
+.slider-item:nth-child(-n+2) {
+    margin-right: 30px;
+}
+
+.slider__arrow_left {
+    background: url(../SVG/Arrow_left.svg);
+    width: 42px;
+    height: 14px;
+    cursor: pointer;
+    border: none;
+    transition: ease 800ms;
+}
+
+.slider__arrow_right {
+    background: url(../SVG/Arrow_right.svg);
+    width: 42px;
+    height: 14px;
+    cursor: pointer;
+    border: none;
+    transition: ease 800ms;
+}
+
+.slider__arrow_left:hover, .slider__arrow_right:hover {
+    transform: scale(1.3);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__dots-item {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+  }
+  
+  .slider__dots-item:hover, .slider__dots-item.active {
+    background: rgb(255, 255, 255);
+  }
+
+
+
+.projects-info {
+    padding-top: 53px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-info__slider-images {
+    position: relative;
+    width: 679px;
+    height: 482px;
+}
+
+
+.projects-info__slider-images .image {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+
+.projects-info__slider-images .image.active {
+    opacity: 1;
+}
+
+.projects-info__text {
+    width: 442px;
+}
+
+.projects-list__item:hover, .projects-list__item.active{
+    color: #E3B873;
+    border-bottom: 2px solid #E3B873;
+}
